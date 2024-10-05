@@ -34,9 +34,6 @@ def show_purchase_history():
     for purchase in user_purchase_history:
         print(purchase)
 
-    show_menu()
-
-
 def show_menu():
     while True:
         print()
