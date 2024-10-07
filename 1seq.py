@@ -7,4 +7,4 @@ while counter != (int(count_element) + 1):
     counter += 1
 
 print('Ваш список')
-print(list_elements.sort())
+print(sorted(list_elements))

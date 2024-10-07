@@ -25,7 +25,7 @@ def victorina():
     print('Желаем вам удачи !')
 
     for actor in random_hollywood_actors:
-        age = input(f'Какой возраст у актёра {actor[0]} ? ')
+        age = input(f'Сколько лет актёру {actor[0]} ? ')
         if (age != str(actor[1])):
             count_incorrect_answer += 1
             print('Не верно. ')
