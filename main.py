@@ -24,11 +24,11 @@ while True:
     input_choice = to_number(choice)
 
     while not is_number(input_choice):
-        input_choice = input("Введите число от 1 до 11: ")
+        input_choice = input("Введите число от 1 до 12: ")
         input_choice = to_number(input_choice)
 
-    if input_choice < 1 or input_choice > 11:
-        print('Выход. Вы должны ввести число от 1 до 11')
+    if input_choice < 1 or input_choice > 12:
+        print('Выход. Вы должны ввести число от 1 до 12')
         break
 
     if input_choice == 1:
