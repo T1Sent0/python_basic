@@ -12,8 +12,6 @@ def pay_balance():
     except ValueError:
         print(f"Невозможно преобразовать '{new_balance}' в число.")
 
-    show_menu()
-
 
 def purchase():
     global user_balance
@@ -31,8 +29,6 @@ def purchase():
     except ValueError:
         print(f"Невозможно преобразовать '{sum_purchase}' в число.")
 
-    show_menu()
-
 
 def show_purchase_history():
     for purchase in user_purchase_history:
@@ -44,10 +40,10 @@ def show_menu():
         print()
         print(f"На вашем счету {user_balance}")
         print()
-        print('1. пополнение счета')
-        print('2. покупка')
-        print('3. история покупок')
-        print('4. выход')
+        print('1. Пополнение счета')
+        print('2. Покупка')
+        print('3. История покупок')
+        print('4. Выход')
 
         print()
         choice = input('Выберите пункт меню: ')

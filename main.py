@@ -44,15 +44,15 @@ while True:
         copy(source_directory, dest_directory)
 
     elif input_choice == 4:
-        directory_name = input("Введите име директории: ")
+        directory_name = input("Введите имя директории (Enter - текущая директория): ")
         show_current_directory(directory_name)
 
     elif input_choice == 5:
-        directory_name = input("Введите имя директории: ")
+        directory_name = input("Введите имя директории (Enter - текущая директория): ")
         show_only_directory(directory_name)
 
     elif input_choice == 6:
-        directory_name = input("Введите имя директории: ")
+        directory_name = input("Введите имя директории (Enter - текущая директория): ")
         show_only_files(directory_name)
 
     elif input_choice == 7:
@@ -69,8 +69,10 @@ while True:
         show_menu()
 
     elif input_choice == 11:
+        print(f'Текущая директория {get_current_dir()}')
         directory_name = input("Введите имя директории: ")
         change_work_directory(directory_name)
+        print(f'Текущая директория {get_current_dir()}')
 
     elif input_choice == 12:
         break

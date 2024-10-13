@@ -3,6 +3,14 @@ import shutil
 import platform
 
 
+def get_current_dir():
+    """
+    Получает текущую директорию
+    :return:
+    """
+    return os.getcwd()
+
+
 def create_directory(name):
     """
     Функция создаёт директорию
@@ -49,6 +57,9 @@ def show_current_directory(path):
     :param path:
     :return:
     """
+    if path == '':
+        path = get_current_dir()
+
     if os.path.isdir(path):
         print()
         for dir_item in os.listdir(path):
@@ -63,6 +74,9 @@ def show_only_directory(path):
     :param path:
     :return:
     """
+    if path == '':
+        path = get_current_dir()
+
     for dir_item in os.listdir(path):
         if os.path.isdir(dir_item):
             print(dir_item)
@@ -74,6 +88,9 @@ def show_only_files(path):
     :param path:
     :return:
     """
+    if path == '':
+        path = get_current_dir()
+
     for dir_item in os.listdir(path):
         if not os.path.isdir(dir_item):
             print(dir_item)
@@ -103,4 +120,7 @@ def change_work_directory(path):
         print("Нельзя изменить директорию на файл")
         return
     else:
-        os.chdir(path)
+        if os.path.exists(path):
+            os.chdir(path)
+        else:
+            print("Путь не найден")
