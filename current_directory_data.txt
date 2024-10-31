@@ -1,0 +1,2 @@
+files - current_directory_data.txt main.py my_bank.py victory.py 
+dirs - .idea .venv user_data utils venv __pycache__
